@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Class1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SharpPluginLoader.Core">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Monster Hunter World\nativePC\plugins\CSharp\Loader\SharpPluginLoader.Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
