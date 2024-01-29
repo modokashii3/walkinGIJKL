@@ -1,1 +1,1 @@
-Download from Release tab to the right ->
+Download from Releases tab
