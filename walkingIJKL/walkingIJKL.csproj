@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="SharpPluginLoader.Core" Version="0.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="SharpPluginLoader.Core">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Monster Hunter World\nativePC\plugins\CSharp\Loader\SharpPluginLoader.Core.dll</HintPath>
     </Reference>

@@ -7,9 +7,15 @@ namespace walkinGIJKL
     public class walkinGIJKL : IPlugin 
     {
         public string Name => "walkinGIJKL";
+        public string Author => "Seka";
 
         private Hook<InputUpdateDelegate> _inputUpdateHook = null!;
         private delegate void InputUpdateDelegate(nint pad);
+
+        public void OnLoad()
+        {
+            _inputUpdateHook = Hook.Create<InputUpdateDelegate>(0x141b15af0, InputUpdateHook);
+        }
 
         public void InputUpdateHook(nint pad)
         {
@@ -31,13 +37,5 @@ namespace walkinGIJKL
             else if (!Input.IsDown(Key.J) && !Input.IsDown(Key.L))
                 xAxis = 0;
         }
-
-        public PluginData Initialize()
-        {
-            _inputUpdateHook = Hook.Create<InputUpdateDelegate>(0x141b15af0, InputUpdateHook);
-            return new PluginData();
-        }
-        public void OnLoad() { }
-
     }
 }
