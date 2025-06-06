@@ -7,14 +7,14 @@ namespace walkinGIJKL
     public class walkinGIJKL : IPlugin 
     {
         public string Name => "walkinGIJKL";
-        public string Author => "Seka";
+        public string Author => "seka";
 
         private Hook<InputUpdateDelegate> _inputUpdateHook = null!;
         private delegate void InputUpdateDelegate(nint pad);
 
         public void OnLoad()
         {
-            _inputUpdateHook = Hook.Create<InputUpdateDelegate>(0x141b15af0, InputUpdateHook);
+            _inputUpdateHook = Hook.Create<InputUpdateDelegate>(0x1422a5040, InputUpdateHook); // 0x141b15af0 in ver15.21
         }
 
         public void InputUpdateHook(nint pad)
